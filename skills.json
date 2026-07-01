@@ -1,0 +1,24 @@
+{
+  "entries": [
+    {
+      "path": "vendor/superpowers/skills",
+      "comment": "資深工程師視角：強制遵循 TDD 與系統架構最佳實踐"
+    },
+    {
+      "path": "vendor/humanizer-zh",
+      "comment": "文案潤飾專家：確保輸出流暢的繁體中文，消除 AI 八股文腔調"
+    },
+    {
+      "path": "vendor/pm-skills/skills",
+      "comment": "產品經理視角：負責引導需求釐清、產出 PRD 與 User Story"
+    },
+    {
+      "path": "vendor/anthropic-skills/skills/frontend-design",
+      "comment": "前端與 UI 視覺指南：確保產出高質感、現代化的 Vercel 風格介面"
+    },
+    {
+      "path": "vendor/anthropic-skills/skills/skill-creator",
+      "comment": "技能建造者 (官方)：用於自動產生、修改與優化其他的 AI 技能"
+    }
+  ]
+}
