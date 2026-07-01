@@ -23,7 +23,10 @@
   - `pm-skills`：自動切換 PM 視角，產出高品質 PRD 與 User Story。
   - `frontend-design`：強制套用 Vercel 極簡黑白高質感設計規範。
   - `humanizer-zh`：徹底消除生硬的 AI 翻譯腔，產出流暢繁體中文。
-- 🛠️ **客製化內部工具**：內建自製的 Git 提交 SOP、快速部署腳本，以及高質量 `README` 自動生成器。
+- 🛠️ **客製化內部工具與資安護城河**：
+  - `lazy-senior`：強制套用極簡哲學 (YAGNI)，防範 AI 過度設計，只寫最必要的 Code。
+  - `backend-api`：內建 Wiz 企業級 OWASP 資安基準的三層式架構後端開發規範。
+  - 自製部署腳本 (`deploy`)、防機密外洩的 Git 提交 SOP (`git`)，以及高質感 README 生成器 (`readme-generator`)。
 
 ## 🚀 快速開始 (Quick Start)
 
@@ -56,6 +59,8 @@ liai/
 ├── AGENTS.md           # 跨專案通用最高指導原則 (大腦憲法)
 ├── skills.json         # 外部安全第三方技能掛載清單
 ├── skills/             # 內部自製技能 (自動註冊載入)
+│   ├── backend-api/    # 後端開發與 OWASP 資安基準
+│   ├── lazy-senior/    # 極簡工程師防護網
 │   ├── git/
 │   ├── deploy/
 │   └── readme-generator/
