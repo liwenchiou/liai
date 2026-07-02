@@ -19,7 +19,7 @@ description: Git 自動化協作流程與 Commit 撰寫規範
 ## Step 3: 發布前資安快篩 (Pre-Push Security Check - CRITICAL)
 
 - **防禦敏感外洩**：根據 `git diff` 的結果，嚴格肉眼審查是否有意外 add 了 `.env`、私鑰 (`.pem`, `.key`) 或任何包含 Hardcoded API Key、密碼的程式碼。
-- **大腦防護檢查**：確保沒有把 `.agents` (LIAI 大腦資料夾) 意外納入 Commit 中。
+- **大腦防護檢查**：確保沒有把指向 LIAI 全域大腦的軟連結（如 `.agents`, `.cursorrules`, `.claudemc` 等）意外納入 Commit 中。
 - **中斷機制**：若發現任何潛在的資安漏洞或不該 Push 的檔案，**必須立刻中斷流程並發出紅色警告**，要求我移除該檔案後才能繼續。
 
 ## Step 4: 產生摘要與 Commit Message
