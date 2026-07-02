@@ -33,17 +33,37 @@
 
 ## 🚀 快速開始 (Quick Start)
 
-### 安裝 LIAI 大腦
+### 跨模型一鍵掛載 (Cross-Model Mounting)
 
-在你的新專案中，你可以透過軟連結 (Symlink) 或是 Docker Bind Mount 的方式，將 LIAI 掛載為該專案的 `.agents` 目錄：
+在你的新專案中，你可以透過「軟連結 (Symlink)」的方式，將 LIAI 全域大腦掛載給各大主流 AI 工具。
+這樣不僅會載入全域規範，確保大腦內的相對路徑 (如 `skills/`) 正常運作，還能自動向下相容專案根目錄的 `.agent` 本地設定。
 
-```bash
-# 進入你的新專案目錄
-cd /path/to/your/new/project
+請先進入你的新專案目錄 (`cd /path/to/your/new/project`)，並依據你使用的 AI 工具執行對應的一行指令：
 
-# 建立軟連結，讓 AI 自動讀取全域大腦
-ln -s /path/to/liai .agents
-```
+- **Antigravity IDE (Gemini) / 通用 Agent 框架**
+  ```bash
+  ln -s /path/to/liai .agents
+  ```
+
+- **Cursor**
+  ```bash
+  ln -s /path/to/liai .agents && ln -s .agents/AGENTS.md .cursorrules
+  ```
+
+- **Claude Dev (VSCode) / Cline**
+  ```bash
+  ln -s /path/to/liai .agents && ln -s .agents/AGENTS.md .claudemc
+  ```
+
+- **Windsurf / Codeium**
+  ```bash
+  ln -s /path/to/liai .agents && ln -s .agents/AGENTS.md .windsurfrules
+  ```
+
+- **GitHub Copilot**
+  ```bash
+  ln -s /path/to/liai .agents && mkdir -p .github && ln -s ../.agents/AGENTS.md .github/copilot-instructions.md
+  ```
 
 ### 使用範例 (Usage)
 
