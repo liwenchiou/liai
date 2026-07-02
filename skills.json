@@ -19,6 +19,14 @@
     {
       "path": "vendor/anthropic-skills/skills/skill-creator",
       "comment": "技能建造者 (官方)：用於自動產生、修改與優化其他的 AI 技能"
+    },
+    {
+      "path": "skills/backend-api",
+      "comment": "全端後端 API 開發規範 (Node.js/PHP)：融合 awesome-cursorrules 結構與高資安防禦"
+    },
+    {
+      "path": "skills/lazy-senior",
+      "comment": "Ponytail 極簡哲學：讓 AI 成為不加戲、只寫最少最精準程式碼的資深工程師"
     }
   ]
 }
