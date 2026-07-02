@@ -38,31 +38,67 @@
 在你的新專案中，你可以透過「軟連結 (Symlink)」的方式，將 LIAI 全域大腦掛載給各大主流 AI 工具。
 這樣不僅會載入全域規範，確保大腦內的相對路徑 (如 `skills/`) 正常運作，還能自動向下相容專案根目錄的 `.agent` 本地設定。
 
-請先進入你的新專案目錄 (`cd /path/to/your/new/project`)，並依據你使用的 AI 工具執行對應的一行指令：
+請先進入你的新專案目錄 (`cd /path/to/your/new/project`)。
+> ⚠️ **Windows 用戶注意**：建立軟連結需要較高權限。請確保以**系統管理員身分 (Run as Administrator)** 開啟 PowerShell，或是開啟 Windows 系統的「開發人員模式」。
 
-- **Antigravity IDE (Gemini) / 通用 Agent 框架**
+#### 1. Antigravity IDE (Gemini) / 通用 Agent 框架
+- 🍏🐧 **Mac / Linux (Bash/Zsh)**
   ```bash
-  ln -s /path/to/liai .agents
+  ln -s /path/to/liai .agents && echo ".agents" >> .gitignore
+  ```
+- 🪟 **Windows (PowerShell)**
+  ```powershell
+  New-Item -ItemType SymbolicLink -Path ".agents" -Target "C:\path\to\liai"
+  Add-Content -Path ".gitignore" -Value ".agents"
   ```
 
-- **Cursor**
+#### 2. Cursor
+- 🍏🐧 **Mac / Linux (Bash/Zsh)**
   ```bash
-  ln -s /path/to/liai .agents && ln -s .agents/AGENTS.md .cursorrules
+  ln -s /path/to/liai .agents && ln -s .agents/AGENTS.md .cursorrules && echo ".agents" >> .gitignore && echo ".cursorrules" >> .gitignore
+  ```
+- 🪟 **Windows (PowerShell)**
+  ```powershell
+  New-Item -ItemType SymbolicLink -Path ".agents" -Target "C:\path\to\liai"
+  New-Item -ItemType SymbolicLink -Path ".cursorrules" -Target ".agents\AGENTS.md"
+  Add-Content -Path ".gitignore" -Value ".agents`n.cursorrules"
   ```
 
-- **Claude Dev (VSCode) / Cline**
+#### 3. Claude Dev (VSCode) / Cline
+- 🍏🐧 **Mac / Linux (Bash/Zsh)**
   ```bash
-  ln -s /path/to/liai .agents && ln -s .agents/AGENTS.md .claudemc
+  ln -s /path/to/liai .agents && ln -s .agents/AGENTS.md .claudemc && echo ".agents" >> .gitignore && echo ".claudemc" >> .gitignore
+  ```
+- 🪟 **Windows (PowerShell)**
+  ```powershell
+  New-Item -ItemType SymbolicLink -Path ".agents" -Target "C:\path\to\liai"
+  New-Item -ItemType SymbolicLink -Path ".claudemc" -Target ".agents\AGENTS.md"
+  Add-Content -Path ".gitignore" -Value ".agents`n.claudemc"
   ```
 
-- **Windsurf / Codeium**
+#### 4. Windsurf / Codeium
+- 🍏🐧 **Mac / Linux (Bash/Zsh)**
   ```bash
-  ln -s /path/to/liai .agents && ln -s .agents/AGENTS.md .windsurfrules
+  ln -s /path/to/liai .agents && ln -s .agents/AGENTS.md .windsurfrules && echo ".agents" >> .gitignore && echo ".windsurfrules" >> .gitignore
+  ```
+- 🪟 **Windows (PowerShell)**
+  ```powershell
+  New-Item -ItemType SymbolicLink -Path ".agents" -Target "C:\path\to\liai"
+  New-Item -ItemType SymbolicLink -Path ".windsurfrules" -Target ".agents\AGENTS.md"
+  Add-Content -Path ".gitignore" -Value ".agents`n.windsurfrules"
   ```
 
-- **GitHub Copilot**
+#### 5. GitHub Copilot
+- 🍏🐧 **Mac / Linux (Bash/Zsh)**
   ```bash
-  ln -s /path/to/liai .agents && mkdir -p .github && ln -s ../.agents/AGENTS.md .github/copilot-instructions.md
+  ln -s /path/to/liai .agents && mkdir -p .github && ln -s ../.agents/AGENTS.md .github/copilot-instructions.md && echo ".agents" >> .gitignore
+  ```
+- 🪟 **Windows (PowerShell)**
+  ```powershell
+  New-Item -ItemType SymbolicLink -Path ".agents" -Target "C:\path\to\liai"
+  New-Item -ItemType Directory -Path ".github" -Force
+  New-Item -ItemType SymbolicLink -Path ".github\copilot-instructions.md" -Target "..\.agents\AGENTS.md"
+  Add-Content -Path ".gitignore" -Value ".agents"
   ```
 
 ### 使用範例 (Usage)

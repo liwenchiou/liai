@@ -57,7 +57,7 @@
 
 ### 🎯 情境五：版本控制與部署 (自動觸發自訂 `git` & `deploy` Skills)
 - **觸發條件**：當我要求「幫我執行 git」、「幫我 commit」或「幫我部署」時。
-- **自動行為**：讀取 `skills/git/SKILL.md` 的四步 SOP（確認路徑 ➡️ git diff ➡️ 產生繁體摘要 ➡️ 產生指令），或是讀取 `skills/deploy/SKILL.md` 使用 `npx ghaction-lis` 進行部署監聽。
+- **自動行為**：強制優先讀取 `skills/git/SKILL.md` 的四步 SOP（確認路徑 ➡️ git diff ➡️ 產生繁體摘要 ➡️ 產生指令）。若任務包含「發布上線」，請先判斷該專案是否具備 CI/CD 流程；若有部署需求，才接著讀取 `skills/deploy/SKILL.md` 提供 `npx ghaction-lis` 進行監聽，並非所有專案皆需部署。
 
 ### 🎯 情境六：專案文件與 README 產生 (自動觸發 `readme-generator`)
 - **觸發條件**：當我要求「幫我寫 README」、「產生專案說明」、「幫我推廣專案」時。
