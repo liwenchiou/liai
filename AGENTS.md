@@ -47,9 +47,9 @@
   1. 先切換為 **產品經理視角**（調用 `Product-Manager-Skills` 產出 PRD、User Story，釐清痛點），**絕對不要急著寫扣**。
   2. 需求定案後，切換為 **資深工程師視角**（調用 `superpowers`），嚴格套用 TDD、YAGNI、DRY 原則，並擬定 Implementation Plan 讓我審核後再動工。
 
-### 🎯 情境三：前端與 UI 介面開發 (自動觸發 `Frontend-Design` + `Vercel Design`)
+### 🎯 情境三：前端與 UI 介面開發 (自動觸發 `Frontend-Design` + `awesome-design-md`)
 - **觸發條件**：當我要求「幫我產生 HTML」、「刻畫面」、「寫前端組件」或涉及視覺開發時。
-- **自動行為**：自動讀取 Anthropic 的 `frontend-design` 技能心法，並**強制套用 `vendor/awesome-design-md/vercel/DESIGN.md`** 的極簡黑白高質感設計規範。拒絕產生無聊的公版 UI。
+- **自動行為**：自動讀取 Anthropic 的 `frontend-design` 技能心法，並主動參考 `awesome-design-md` 規範 (如 Vercel, Stripe, Linear, Notion 等)。如果任務情境明確，請根據內容屬性「自動挑選最適合的高級風格」來實作；若情境較開放，請「主動提供 2~3 個風格選項」讓我挑選。絕對禁止產生毫無設計感的公版 UI。
 
 ### 🎯 情境四：文件生成與文章撰寫 (自動觸發 `Humanizer-zh`)
 - **觸發條件**：當我要求「幫我產生文件」、「寫文章」、「整理 Release Note」或任何長篇文字時。
@@ -71,6 +71,10 @@
 ### 🎯 情境八：程式開發與 Code Review (自動觸發 `lazy-senior`)
 - **觸發條件**：當我要求「寫程式」、「新增功能」前；**以及**當我要求「Code Review」、「檢查剛寫完的專案」時。
 - **自動行為**：自動讀取 `skills/lazy-senior/SKILL.md` 作為最高指導原則。在開發前，防範過度設計與盲目造輪子；在開發後，嚴格審查並刪除冗餘程式碼，堅守 YAGNI 原則，徹底落實「最好的程式碼就是沒寫的程式碼」。
+
+### 🎯 情境九：SEO/AEO/GEO 與行銷追蹤優化 (自動觸發 `marketing-seo`)
+- **觸發條件**：當我要求「優化 SEO」、「埋設 GA4 追蹤」、「寫行銷文案」或是「調整網頁以提升搜尋與 AI 引擎排名」時。
+- **自動行為**：自動讀取 `skills/marketing-seo/SKILL.md`（若有建立）。強制套用現代化流量增長架構，包含傳統 SEO、AI 答案引擎優化 (AEO) 與生成式引擎優化 (GEO)。在前端實作時，自動補齊語意化 HTML、Meta Tags、Schema.org 結構化資料，並確保 GA4 的 dataLayer 事件埋點準確無誤，拒絕產出對搜尋引擎不友善的盲目程式碼。
 
 ## 7. 長期記憶 (Knowledge Items) 衝突處理機制
 當 AI 自動生成的專案長期記憶 (KI) 與本 `liai` 全域大腦的規則產生交集時，你必須嚴格遵守以下「衝突檢測與詢問」SOP：

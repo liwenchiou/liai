@@ -27,6 +27,10 @@
     {
       "path": "skills/lazy-senior",
       "comment": "Ponytail 極簡哲學：讓 AI 成為不加戲、只寫最少最精準程式碼的資深工程師"
+    },
+    {
+      "path": "skills/social-publisher",
+      "comment": "社群發布者：將筆記與工具自動轉化為 Threads 碎碎念與 IG 視覺懶人包，並自動製圖"
     }
   ]
 }
