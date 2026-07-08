@@ -1,9 +1,6 @@
 [submodule "vendor/superpowers"]
 	path = vendor/superpowers
 	url = https://github.com/obra/superpowers.git
-[submodule "vendor/humanizer-zh"]
-	path = vendor/humanizer-zh
-	url = https://github.com/op7418/Humanizer-zh.git
 [submodule "vendor/pm-skills"]
 	path = vendor/pm-skills
 	url = https://github.com/deanpeters/Product-Manager-Skills.git
@@ -13,3 +10,6 @@
 [submodule "vendor/awesome-design-md"]
 	path = vendor/awesome-design-md
 	url = https://github.com/VoltAgent/awesome-design-md.git
+[submodule "vendor/humanizer-zh"]
+	path = vendor/humanizer-zh
+	url = https://github.com/ai-zixun/humanizer-zh.git
